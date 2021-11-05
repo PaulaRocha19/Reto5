@@ -9,10 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author jefer
- */
+
 @Repository
 public class RepositorioMensaje {
       @Autowired

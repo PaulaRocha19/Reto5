@@ -15,10 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-/**
- *
- * @author jefer
- */
+
 @Entity
 @Table(name = "reservation")
 public class Reservaciones implements Serializable  {
@@ -33,7 +30,7 @@ public class Reservaciones implements Serializable  {
     @ManyToOne
     @JoinColumn(name = "id")
     @JsonIgnoreProperties("reservations")
-    private Bike bike;
+    private Machine machine;
 
     @ManyToOne
     @JoinColumn(name = "idClient")
@@ -74,12 +71,12 @@ public class Reservaciones implements Serializable  {
         this.status = status;
     }
 
-    public Bike getBike() {
-        return bike;
+    public Machine getMachine() {
+        return machine;
     }
 
-    public void setBike(Bike bike) {
-        this.bike = bike;
+    public void setMachine(Machine machine) {
+        this.machine = machine;
     }
 
     public Cliente getClient() {
@@ -96,8 +93,5 @@ public class Reservaciones implements Serializable  {
 
     public void setScore(String score) {
         this.score = score;
-    }
-    
-    
-    
+    }  
 }

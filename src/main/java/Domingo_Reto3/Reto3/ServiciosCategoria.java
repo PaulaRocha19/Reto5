@@ -9,10 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author jefer
- */
+
 @Service
 public class ServiciosCategoria {
      @Autowired
@@ -60,6 +57,5 @@ public class ServiciosCategoria {
             return true;
         }).orElse(false);
         return d;
-    }
-    
+    }   
 }

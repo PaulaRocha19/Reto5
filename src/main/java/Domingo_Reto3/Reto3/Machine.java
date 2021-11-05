@@ -18,8 +18,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "bike")
-public class Bike implements Serializable{
+@Table(name = "machine")
+public class Machine implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,15 +31,15 @@ public class Bike implements Serializable{
     
     @ManyToOne
     @JoinColumn(name = "categoryId")
-    @JsonIgnoreProperties("bikes")
+    @JsonIgnoreProperties("machines")
     private Categoria category;
 
-     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "bike")
-    @JsonIgnoreProperties({"bike", "client"})
+     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "machine")
+    @JsonIgnoreProperties({"machine", "client"})
     private List<Mensaje> messages;
 
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "bike")
-    @JsonIgnoreProperties({"bike", "client"})
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "machine")
+    @JsonIgnoreProperties({"machine", "messages"})
     private List<Reservaciones> reservations;
 
     public Integer getId() {

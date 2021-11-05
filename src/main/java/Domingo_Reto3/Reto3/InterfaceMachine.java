@@ -6,10 +6,7 @@ package Domingo_Reto3.Reto3;
 
 import org.springframework.data.repository.CrudRepository;
 
-/**
- *
- * @author jefer
- */
-public interface InterfaceBike extends CrudRepository<Bike,Integer> {
+
+public interface InterfaceMachine extends CrudRepository<Machine,Integer> {
     
 }
